@@ -5,7 +5,7 @@
 pacman -S git
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+sudo -u $USER makepkg -si
 cd ..
 rm -rf yay
 
