@@ -11,4 +11,3 @@ cp -R ~/.config/alacritty files/configs/config
 cp -R ~/.config/gtk-3.0 files/configs/config
 cp -R ~/.config/picom files/configs/config
 cp -R ~/.config/qtile files/configs/config
-cp -R ~/.config/wallpaper files/configs/config

@@ -10,19 +10,12 @@ cd ..
 rm -rf yay
 
 # install needed packages
-sudo pacman -S alacritty nitrogen dmenu btop tree neofetch man-db vim zsh curl git
+sudo pacman -S alacritty dmenu btop tree neofetch man-db vim zsh curl git
 yay -S picom ly
 
 # -------- git --------
 # copy git config
 cp files/configs/home/.gitconfig ~
-
-# -------- wallpaper --------
-# copy background image
-cp -R files/configs/config/wallpaper ~/.config
-
-# set background image
-nitrogen --set-zoom-fill ~/.config/wallpaper/flower.jpg
 
 
 # -------- alacritty --------

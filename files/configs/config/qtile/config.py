@@ -143,6 +143,8 @@ widget_colors = {
 
 screens = [
     Screen(
+        wallpaper="~/.config/qtile/wallpaper.jpg",
+        wallpaper_mode="fill",
         top=bar.Bar(
             [
                 widget.GroupBox(
