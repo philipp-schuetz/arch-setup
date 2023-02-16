@@ -10,7 +10,7 @@ cd ..
 rm -rf yay
 
 # install needed packages
-sudo pacman -S alacritty nitrogen dmenu btop tree neofetch man-db vim zsh wget git
+sudo pacman -S alacritty nitrogen dmenu btop tree neofetch man-db vim zsh curl git
 yay -S picom ly
 
 # -------- git --------
@@ -60,7 +60,7 @@ sudo chsh -s /bin/zsh
 # usermod -s /bin/zsh
 
 # install oh my zsh
-sudo sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # install fonts for p10k
 cp -R files/fonts ~/.local/share
