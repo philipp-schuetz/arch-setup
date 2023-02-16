@@ -60,7 +60,7 @@ sudo chsh -s /bin/zsh
 # usermod -s /bin/zsh
 
 # install oh my zsh
-sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # install fonts for p10k
 cp -R files/fonts ~/.local/share
