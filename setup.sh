@@ -1,17 +1,19 @@
 #!/bin/bash
 
+user="philipp"
+
 # -------- install software --------
 # install yay
-sudo pacman -S git
+sudo pacman -S --noconfirm git
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -si --noconfirm
 cd ..
 rm -rf yay
 
 # install needed packages
-sudo pacman -S alacritty dmenu btop tree neofetch man-db vim zsh curl git
-yay -S picom ly
+sudo pacman -S --noconfirm alacritty dmenu btop tree neofetch man-db vim zsh curl git
+yay --noprovides --answerdiff None --answerclean None --mflags "--noconfirm" -S picom ly
 
 # -------- git --------
 # copy git config
@@ -40,7 +42,7 @@ cp -R files/configs/config/qtile ~/.config
 
 # -------- display manager --------
 # remove dm installed with archinstall (systemctl disable also works)
-sudo pacman -Rns lightdm lightdm-gtk-greeter
+sudo pacman --noconfirm -Rns lightdm lightdm-gtk-greeter
 sudo rm /etc/systemd/system/display-manager.service
 
 # enable new dm
@@ -49,7 +51,7 @@ sudo systemctl enable ly.service
 
 # -------- shell --------
 # set zsh as shell
-chsh -s /bin/zsh
+sudo chsh -s /bin/zsh $user
 
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
