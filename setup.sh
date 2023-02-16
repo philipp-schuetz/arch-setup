@@ -2,15 +2,16 @@
 
 # -------- install software --------
 # install yay
-pacman -S git
+sudo pacman -S git
 git clone https://aur.archlinux.org/yay.git
 cd yay
-sudo -u $USER makepkg -si
+makepkg -si
 cd ..
 rm -rf yay
 
 # install needed packages
-yay -S alacritty nitrogen picom dmenu btop tree neofetch ly man-db vim zsh wget git
+sudo pacman -S alacritty nitrogen dmenu btop tree neofetch man-db vim zsh wget git
+yay -S picom ly
 
 # -------- git --------
 # copy git config
@@ -46,20 +47,20 @@ cp -R files/configs/config/qtile ~/.config
 
 # -------- display manager --------
 # remove dm installed with archinstall (systemctl disable also works)
-pacman -Rns lightdm lightdm-gtk-greeter
-rm /etc/systemd/system/display-manager.service
+sudo pacman -Rns lightdm lightdm-gtk-greeter
+sudo rm /etc/systemd/system/display-manager.service
 
 # enable new dm
-systemctl enable ly.service
+sudo systemctl enable ly.service
 
 
 # -------- shell --------
 # set zsh as shell
-chsh -s /bin/zsh
+sudo chsh -s /bin/zsh
 # usermod -s /bin/zsh
 
 # install oh my zsh
-sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+sudo sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 # install fonts for p10k
 cp -R files/fonts ~/.local/share
