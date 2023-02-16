@@ -56,8 +56,7 @@ sudo systemctl enable ly.service
 
 # -------- shell --------
 # set zsh as shell
-sudo chsh -s /bin/zsh
-# usermod -s /bin/zsh
+chsh -s /bin/zsh
 
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -73,7 +72,10 @@ cp files/configs/home/.zshrc ~
 cp files/configs/home/.zshrc.pre-oh-my-zsh ~
 cp files/configs/home/.p10k.zsh ~
 
-exec zsh
-
 echo "--------done--------"
 echo "if the shell looks strange, maybe run 'p10k reconfigure'"
+
+read -p "Press enter to exit and reboot now"
+sudo shutdown -r now
+
+
