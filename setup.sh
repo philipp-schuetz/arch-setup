@@ -72,8 +72,10 @@ cp files/configs/home/.zshrc ~
 cp files/configs/home/.zshrc.pre-oh-my-zsh ~
 cp files/configs/home/.p10k.zsh ~
 
+echo ""
+echo ""
 echo "--------done--------"
-echo "if the shell looks strange, maybe run 'p10k reconfigure'"
+echo "if the shell looks strange, maybe run 'p10k reconfigure' after the reboot"
 
 read -p "Press enter to exit and reboot now"
 sudo shutdown -r now
