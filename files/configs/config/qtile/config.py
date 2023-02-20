@@ -197,8 +197,7 @@ screens = [
                     distro="Arch",
                     padding=5,
                     no_update_string="Updates: N/A",
-                    mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e sudo pacman -Syu')},
-                    update_interval=1800,
+                    update_interval=600,
                     ),
                 widget.Sep(
                     linewidth = 0,
