@@ -12,7 +12,7 @@ cd ..
 rm -rf yay
 
 # install needed packages
-sudo pacman -S --noconfirm alacritty dmenu btop tree neofetch man-db vim zsh curl git
+sudo pacman -S --noconfirm alacritty dmenu btop tree neofetch man-db vim zsh curl git firefox discord
 yay --noprovides --answerdiff None --answerclean None --mflags "--noconfirm" -S picom ly
 
 # -------- git --------
