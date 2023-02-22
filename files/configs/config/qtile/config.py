@@ -140,6 +140,7 @@ widget_colors = {
         "font_window_name": "#6d97d3",
         "font_updates": "#ffffff",
         }
+font = "MesloLGS NF"
 
 screens = [
     Screen(
@@ -149,6 +150,7 @@ screens = [
             [
                 widget.GroupBox(
                     fontsize=10,
+                    font=font,
                     padding=5,
                     margin_x=0,
                     rounded=False,
@@ -169,6 +171,7 @@ screens = [
                     scale=0.6,
                     ),
                 widget.CurrentLayout(
+                    font=font,
                     padding = 0,
                     background = widget_colors["bg"],
                     ),
@@ -178,6 +181,7 @@ screens = [
                     background = widget_colors["bg"],
                     ),
                 widget.WindowName(
+                    font=font,
                     background=widget_colors["bg"],
                     foreground=widget_colors["font_window_name"],
                     ),
@@ -190,6 +194,7 @@ screens = [
                     background = widget_colors["bg"],
                     ),
                 widget.CheckUpdates(
+                    font=font,
                     background=widget_colors["bg"],
                     colour_have_updates=widget_colors["font_updates"],
                     colour_no_updates=widget_colors["font_updates"],
@@ -200,23 +205,62 @@ screens = [
                     update_interval=600,
                     ),
                 widget.Sep(
-                    linewidth = 0,
+                    linewidth = 1,
                     padding = 5,
                     background = widget_colors["bg"],
                     ),
                 widget.Volume(
+                    font=font,
                     background=widget_colors["bg"],
                     fmt = 'Vol: {}',
                     padding = 5,
                     ),
                 widget.Sep(
-                    linewidth = 0,
+                    linewidth = 1,
+                    padding = 5,
+                    background = widget_colors["bg"],
+                    ),
+                widget.Battery(
+                    font=font,
+                    fontsize=25,
+                    background=widget_colors["bg"],
+                    format="{char}",
+                    padding=5,
+                    full_char="",
+                    charge_char="",
+                    discharge_char="",
+                    update_interval=5,
+                    ),
+                 widget.Battery(
+                    font=font,
+                    background=widget_colors["bg"],
+                    format="{char}{percent:2.0%}",
+                    charge_char="Charging... ",
+                    discharge_char="",
+                    padding=5,
+                    ),
+                widget.Sep(
+                    linewidth = 1,
                     padding = 5,
                     background = widget_colors["bg"],
                     ),
                 widget.Clock(
+                    font=font,
                     background=widget_colors["bg"],
                     format="%a %d.%b %H:%M",
+                    padding=5,
+                    ),
+                widget.Sep(
+                    linewidth = 1,
+                    padding = 5,
+                    background = widget_colors["bg"],
+                    ),
+                widget.QuickExit(
+                    font=font,
+                    fontsize=16,
+                    background=widget_colors["bg"],
+                    default_text="",
+                    countdown_format="{}",
                     padding=5,
                     ),
             ],
