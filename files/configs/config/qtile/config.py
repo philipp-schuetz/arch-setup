@@ -75,6 +75,16 @@ keys = [
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+
+    # custom hotkeys
+    # brightness
+    Key([], "XF86MonBrightnessUp", lazy.spawn("light -A 10"), desc="increase screen brightness"),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("light -U 10"), desc="decrease screen brightness"),
+
+    # sound 
+    Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle"), desc="mute audio"),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute"), desc="lower volume"),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute"), desc="raise volume"),
 ]
 
 groups = [Group(i) for i in "123456789"]
@@ -170,14 +180,14 @@ screens = [
                     background = widget_colors["bg"],
                     scale=0.6,
                     ),
-                widget.CurrentLayout(
-                    font=font,
-                    padding = 0,
-                    background = widget_colors["bg"],
-                    ),
+                #widget.CurrentLayout(
+                #    font=font,
+                #    padding = 0,
+                #    background = widget_colors["bg"],
+                #    ),
                 widget.Sep(
                     linewidth = 0,
-                    padding = 10,
+                    padding = 5,
                     background = widget_colors["bg"],
                     ),
                 widget.WindowName(
@@ -193,15 +203,22 @@ screens = [
                     padding = 5,
                     background = widget_colors["bg"],
                     ),
+                widget.TextBox(
+                    font=font,
+                    fontsize=15,
+                    fmt="",
+                    background=widget_colors["bg"],
+                    padding=5,
+                    ),
                 widget.CheckUpdates(
                     font=font,
                     background=widget_colors["bg"],
                     colour_have_updates=widget_colors["font_updates"],
                     colour_no_updates=widget_colors["font_updates"],
-                    display_format="Updates: {updates}",
-                    distro="Arch",
+                    display_format="{updates} Updates",
+                    distro="Arch_yay",
                     padding=5,
-                    no_update_string="Updates: N/A",
+                    no_update_string="Updated",
                     update_interval=600,
                     ),
                 widget.Sep(
@@ -209,10 +226,17 @@ screens = [
                     padding = 5,
                     background = widget_colors["bg"],
                     ),
+                widget.TextBox(
+                    font=font,
+                    fontsize=16,
+                    fmt="墳",
+                    background=widget_colors["bg"],
+                    padding=5,
+                    ),
                 widget.Volume(
                     font=font,
                     background=widget_colors["bg"],
-                    fmt = 'Vol: {}',
+                    fmt="{}",
                     padding = 5,
                     ),
                 widget.Sep(
@@ -263,8 +287,14 @@ screens = [
                     countdown_format="{}",
                     padding=5,
                     ),
+                widget.Sep(
+                    linewidth = 0,
+                    padding = 5,
+                    background = widget_colors["bg"],
+                    ),
             ],
-            24,
+            24, # size
+            opacity=1,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
@@ -280,7 +310,7 @@ mouse = [
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: list
-follow_mouse_focus = True
+follow_mouse_focus = False
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
