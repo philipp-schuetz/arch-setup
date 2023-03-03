@@ -1,5 +1,4 @@
 #!/bin/bash
-
 user="philipp"
 
 # -------- install software --------
@@ -12,8 +11,11 @@ cd ..
 rm -rf yay
 
 # install needed packages
-sudo pacman -S --noconfirm alacritty dmenu btop tree neofetch man-db vim zsh curl git firefox discord
-yay --noprovides --answerdiff None --answerclean None --mflags "--noconfirm" -S picom ly
+sudo pacman -S --noconfirm alacritty dmenu btop tree neofetch man-db vim zsh curl git discord picom light alsa-utils neovim udisks2
+yay --noprovides --answerdiff None --answerclean None --mflags "--noconfirm" -S ly librewolf-bin
+
+# add user to groups
+usermod -aG video,audio $user
 
 # -------- git --------
 # copy git config
