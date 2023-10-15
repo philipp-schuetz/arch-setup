@@ -1,6 +1,5 @@
 # Arch Setup
 My arch linux setup.
 
-run `setup.sh` to install software and place the configs in the right directories.
-
-run `get-files.sh` to pull in the configs from their folders
+- run `install.sh` to install required packages and copy the configs in the right directories
+- run `get-files.sh` to copy in the configs to the repo
