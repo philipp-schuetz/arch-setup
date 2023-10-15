@@ -1,0 +1,5 @@
+/* Text Font */
+
+* {
+    font: "Meslo LGS NF 10";
+}

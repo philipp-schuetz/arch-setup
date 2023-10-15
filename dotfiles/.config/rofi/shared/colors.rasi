@@ -1,0 +1,29 @@
+* {
+    background:     #1e1e2e;
+    background-alt: #1e1e2e;
+    foreground:     #1e1e2e;
+    selected:       #1e1e2e;
+    active:         #1e1e2e;
+    urgent:         #1e1e2e;
+
+    rosewater: 	#f5e0dc;
+    flamingo:	#f2cdcd;
+    pink:   	#f5c2e7;
+    mauve:	#cba6f7;
+    red: 	#f38ba8;
+    maroon:	#eba0ac;
+    peach:	#fab387;
+    yellow:	#f9e2af;
+    lavender: 	#b4befe;
+    blue:	#89b4fa;
+
+    text:	#cdd6f4;
+
+    overlay:	#6c7086;
+    surface2:	#585b70;
+    surface1:	#45475a;
+    surface0:	#313244;
+    base:	#1e1e2e;
+
+    transparent:transparent;    
+}
