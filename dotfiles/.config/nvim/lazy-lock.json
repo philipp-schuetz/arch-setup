@@ -1,0 +1,13 @@
+{
+  "barbecue": { "branch": "main", "commit": "cd7e7da622d68136e13721865b4d919efd6325ed" },
+  "catppuccin": { "branch": "main", "commit": "dcef0a062de380885193fb0f919217d58b979753" },
+  "dashboard-nvim": { "branch": "master", "commit": "fd68b9d05aedc57e5d97a6b66a4e3db877872f64" },
+  "lazy.nvim": { "branch": "main", "commit": "b9c604e839e854bc999e99b90319f1b49776aeac" },
+  "lualine.nvim": { "branch": "master", "commit": "45e27ca739c7be6c49e5496d14fcf45a303c3a63" },
+  "nvim-navic": { "branch": "master", "commit": "0ffa7ffe6588f3417e680439872f5049e38a24db" },
+  "nvim-tree.lua": { "branch": "master", "commit": "aaee4cd896b74f85a81bed7eef2db7869960c4d0" },
+  "nvim-treesitter": { "branch": "master", "commit": "49e71322db582147ce8f4df1853d9dab08da0826" },
+  "nvim-web-devicons": { "branch": "master", "commit": "3af745113ea537f58c4b1573b64a429fefad9e07" },
+  "plenary.nvim": { "branch": "master", "commit": "50012918b2fc8357b87cff2a7f7f0446e47da174" },
+  "telescope.nvim": { "branch": "master", "commit": "7011eaae0ac1afe036e30c95cf80200b8dc3f21a" }
+}
