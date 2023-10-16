@@ -19,9 +19,10 @@ cp -R ~/.config/gtk-2.0 dotfiles/.config/
 cp -R ~/.config/gtk-3.0 dotfiles/.config/
 cp -R ~/.config/neofetch dotfiles/.config/
 cp -R ~/.config/nvim dotfiles/.config/
-cp -R ~/.config/pavucontrol.ini dotfiles/.config/
+cp ~/.config/pavucontrol.ini dotfiles/.config/
 cp -R ~/.config/picom dotfiles/.config/
 cp -R ~/.config/qtile dotfiles/.config/
 cp -R ~/.config/rofi dotfiles/.config/
+cp ~/.config/starship.toml dotfiles/.config/
 
 cp /etc/pacman.conf configs/pacman.conf

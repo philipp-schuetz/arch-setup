@@ -17,6 +17,7 @@ gimp
 git
 gnome-themes-extra
 gparted
+intellij-idea-ultimate-edition
 libreoffice-fresh
 librewolf-bin
 lshw
@@ -49,6 +50,7 @@ rofi
 rofi-calc
 signal-desktop
 sl
+starship
 steam
 stress
 thunar
