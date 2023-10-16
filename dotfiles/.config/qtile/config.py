@@ -378,6 +378,15 @@ auto_minimize = False
 # When using the Wayland backend, this can be used to configure input devices.
 wl_input_rules = None
 
+@hook.subscribe.client_new
+def new_client(client):
+    if client.name == "LibreWolf":
+        client.togroup("2")
+    elif client.name == "Discord Updater":
+        client.togroup("3")
+    elif client.name == " - Discord":
+        client.togroup("3")
+
 @hook.subscribe.startup_once
 def autostart():
     home = os.path.expanduser('~')
