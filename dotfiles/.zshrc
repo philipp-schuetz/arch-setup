@@ -32,3 +32,4 @@ alias grep='grep --color=auto'
 export PATH=/home/philipp/apps/pycharm-2023.2.1/bin:$PATH
 export PATH=/home/philipp/apps/WebStorm-232.9921.42/bin:$PATH
 export PATH=/home/philipp/apps:$PATH
+export PATH=/home/philipp/apps/idea-IU-232.10227.8/bin:$PATH
