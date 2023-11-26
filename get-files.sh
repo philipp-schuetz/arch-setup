@@ -26,3 +26,4 @@ cp -R ~/.config/rofi dotfiles/.config/
 cp ~/.config/starship.toml dotfiles/.config/
 
 cp /etc/pacman.conf configs/pacman.conf
+cp /etc/fstab configs/fstab
