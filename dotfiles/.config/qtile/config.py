@@ -75,8 +75,8 @@ keys = [
 
     # Sound
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle"), desc="mute audio"),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 2 sset Master 10- unmute"), desc="lower volume"),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 2 sset Master 10+ unmute"), desc="raise volume"),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 3 sset Master 10- unmute"), desc="lower volume"),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 3 sset Master 10+ unmute"), desc="raise volume"),
 
     Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause"), desc="Play/Pause player"),
     Key([], "XF86AudioNext", lazy.spawn("playerctl next"), desc="Skip to next"),
@@ -147,7 +147,7 @@ colors = [
     "#a6e3a1", #green
 ]
 
-font = "MesloLGS NF"
+font = "JetBrainsMono NF"
 
 
 
@@ -235,14 +235,16 @@ def init_widgets_list():
             font=font,
             foreground="#fab387",
             fontsize=16,
-            fmt="",
+            fmt="󰖩",
             padding=5,
             ),
         widget.Wlan(
             font=font,
             foreground="#fab387",
             format="{essid}",
+            disconnected_message="Disconnected",
             fmt="{}",
+            interface="wlp8s0",
             padding = 5,
             ),
         widget.Sep(
@@ -262,7 +264,7 @@ def init_widgets_list():
             colour_have_updates="#f38ba8",
             colour_no_updates="#f38ba8",
             display_format="{updates} Updates",
-            distro="Arch_yay",
+            distro="Arch_paru",
             padding=5,
             no_update_string="Updated",
             update_interval=60,
@@ -275,7 +277,7 @@ def init_widgets_list():
             font=font,
             foreground="#cba6f7",
             fontsize=16,
-            fmt="",
+            fmt="󰃭",
             padding=5,
             ),
         widget.Clock(
